@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Data — keep the directory layout but not the contents
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Generated artifacts
+models/*
+!models/.gitkeep
+reports/figures/*
+reports/backtests/*
+reports/latest_prediction.json
+!reports/figures/.gitkeep
+!reports/backtests/.gitkeep
+
+# OS
+.DS_Store

@@ -1,0 +1,22 @@
+{
+  "_comment": "Bloomberg securities for the scrap tracker. VERIFY the exact security strings in your Terminal (type the description, or LME <GO>) — the tickers below are common forms but confirm before trusting. LME prices are USD/tonne, which matches the tracker's convention.",
+  "securities": {
+    "lme_alloy": {
+      "ticker": "LMAADS03 Comdty",
+      "_desc": "LME Aluminium Alloy 3-Month rolling forward. CONFIRM: also seen as NASAAC (North American Special Aluminium Alloy) — for US cast scrap prefer the NASAAC contract; set its security here.",
+      "out_csv": "data/lme_alloy.csv",
+      "out_col": "alloy_close"
+    },
+    "lme_aluminum": {
+      "ticker": "LMAHDS03 Comdty",
+      "_desc": "LME Primary Aluminium 3-Month rolling forward (refresh of the primary anchor).",
+      "out_csv": "data/lme_aluminum.csv",
+      "out_col": "lme_al_close"
+    }
+  },
+  "field": "PX_LAST",
+  "_field_note": "PX_LAST maps to the LME official/close on most setups; PX_SETTLE for official settlement. Override per-run with --field.",
+  "start_date": "2014-06-01",
+  "host": "localhost",
+  "port": 8194
+}

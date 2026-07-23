@@ -1,0 +1,2 @@
+winner,lr_acc,lr_auc,gb_acc,gb_auc
+GB,0.8466,0.916,0.8641,0.9351

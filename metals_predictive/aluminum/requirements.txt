@@ -1,0 +1,12 @@
+# Aluminum Direction Model v1 — scikit-learn only (no TensorFlow/PyTorch).
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+yfinance        # cross-asset cousins + overnight Asian producers (downloaded once, cached)
+
+# Optional accelerated learners — used automatically only if already installed.
+# xgboost
+# lightgbm

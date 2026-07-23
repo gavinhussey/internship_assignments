@@ -1,0 +1,10 @@
+# Bloomberg fetch dependencies (separate from the tracker's core deps).
+# blpapi is NOT on PyPI — it installs from Bloomberg's own index:
+#   pip install --index-url=https://blpapi.bloomberg.com/repository/releases/python/simple/ blpapi
+#
+# xbbg is the optional pandas wrapper (recommended); pulls blpapi as a dependency.
+xbbg
+pandas
+
+# Requires a live Bloomberg session: a logged-in Terminal, or a B-PIPE / Server-API
+# endpoint reachable at host:port (default localhost:8194, set in bloomberg_config.json).

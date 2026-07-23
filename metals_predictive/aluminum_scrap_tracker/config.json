@@ -1,0 +1,17 @@
+{
+  "_comment": "Fully market-data driven. Each grade is anchored to a TRADED benchmark and priced as realization x anchor ($/lb). anchor='p1020' => LME aluminum + Midwest Premium (wrought/clean). anchor='alloy' => LME NASAAC / Aluminium Alloy secondary contract (cast/secondary). realization values are fixed public-spread estimates; update them from published market spreads, not tickets.",
+  "midwest_premium_default_usd_per_lb": 0.20,
+  "_midwest_premium_note": "Used for dates with no row in data/midwest_premium.csv. Elevated by Section 232 tariffs — keep current.",
+  "alloy_premium_usd_per_lb": 0.0,
+  "_alloy_note": "NASAAC is already a North American delivered price, so no Midwest add by default. If you supply the European LME Aluminium Alloy contract instead, set a delivery premium here.",
+  "lme_unit": "usd_per_tonne",
+  "grades": {
+    "6061_6063_extrusion_clean": {"anchor": "p1020", "realization": 0.90, "note": "clean wrought, tracks primary"},
+    "clean_sheet_litho":         {"anchor": "p1020", "realization": 0.85, "note": "clean wrought"},
+    "ubc":                       {"anchor": "p1020", "realization": 0.80, "note": "tracks P1020/MW"},
+    "turnings_borings":          {"anchor": "p1020", "realization": 0.52, "note": "wrought w/ heavy discount"},
+    "zorba":                     {"anchor": "p1020", "realization": 0.58, "note": "shredded basket"},
+    "mixed_low_copper":          {"anchor": "alloy", "realization": 0.82, "note": "feeds secondary; realization vs ALLOY anchor"},
+    "old_cast":                  {"anchor": "alloy", "realization": 0.88, "note": "die-cast feed; realization vs ALLOY anchor"}
+  }
+}

@@ -1,0 +1,2 @@
+ctrl_acc,ctrl_auc,real_acc,real_auc,acc_lift,auc_lift,n_china_features,note
+0.52015732546706,0.5407837132295649,0.5501474926253688,0.582655379317087,0.029990167158308823,0.04187166608752213,23,VALID: positive overnight lift

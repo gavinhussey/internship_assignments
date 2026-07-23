@@ -1,0 +1,2 @@
+ctrl_acc,ctrl_auc,real_acc,real_auc,acc_lift,auc_lift,control_note
+0.5291932059447984,0.5356027148218991,0.8641188959660298,0.9351423499584972,0.3349256900212314,0.39953963513659807,full no-shift: same-day Asian miners + same-day LME/SHFE; gap features excluded

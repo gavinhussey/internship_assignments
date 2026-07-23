@@ -1,0 +1,11 @@
+# Default-Up Copper Direction Model v_1 — scikit-learn only (no TensorFlow/PyTorch).
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+
+# Optional accelerated learners — used automatically only if already installed.
+# xgboost
+# lightgbm
