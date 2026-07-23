@@ -1,0 +1,23 @@
+# Combined requirements for every script/notebook in this repo.
+# Covers: magnitude_of_move/, BTC-Directional-Model-Audit/, dtc_matcher_deliverable/.
+# (hedge_assignment.html and Space_X_Trading_Comp.xlsx are standalone files - open
+# directly in a browser / Excel, no Python dependencies needed.)
+#
+# Setup:
+#   python3.14 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+#   python -m ipykernel install --user --name internship-assignments   # to run the notebooks
+
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+matplotlib
+requests
+yfinance
+torch
+arch
+jupyter
+ipykernel
