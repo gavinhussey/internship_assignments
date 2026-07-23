@@ -1,0 +1,2 @@
+train_start,train_end,test_start,test_end,train_samples,test_samples,num_features,train_accuracy,test_accuracy,test_f1,test_precision,test_recall,test_roc_auc,majority_baseline,beat_baseline_by
+2016-09-16,2024-07-04,2024-07-05,2026-07-05,2849,731,9,0.5426465426465427,0.5198358413132695,0.5960874568469505,0.5138888888888888,0.7095890410958904,0.5125009356987799,0.5006839945280438,0.019151846785225746

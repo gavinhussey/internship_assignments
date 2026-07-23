@@ -1,0 +1,86 @@
+DTC Row,Material,DTC Net,OB Ticket,OB CSV Row,Yard,Ship Date,Inbound Ticket(s),Inbound CSV Row,Inbound Supplier,Exception / Note
+1,STEEL TURNING,11960,1452,303,Milton,2026-03-05,#17717,4450,Suzuki Garphyttan SB,
+2,STEEL WIRE,25600,1451,302,Milton,2026-03-05,#17718,4451,Suzuki Garphyttan SB,
+3,BUSHELING,34120,1449,301,Milton,2026-03-04,#17679,4382,Stellar Industries,
+4,BUSHELING,24820,1450,297,Milton,2026-03-04,#17682,4307,Teck Machine,
+5,STEEL TURNING,14240,1443,294,Milton,2026-03-02,#17549,4186,Suzuki Garphyttan SB,
+6,STEEL WIRE,20060,1442,293,Milton,2026-03-02,#17548,4185,Suzuki Garphyttan SB,
+7,STEEL BANDING (fe),38700,1440,273,Milton,2026-02-27,#17444,3915,Champlain Specialty Metals,
+8,STEEL TURNING,47660,1438,274,Milton,2026-02-28,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+9,STEEL TURNING,44420,1434,267,Milton,2026-02-27,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+10,CLEAN SHEET,18080,1444,271,Milton,2026-02-27,,,chase: Champlain Specialty Metals; DAIFUKU WYNRIGHT,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+11,BUSHELING,29080,1432,266,Milton,2026-02-26,#17409,3921,Stellar Industries,
+12,17-4 STAINLESS STEEL TURNINGS,8620,1431,265,Milton,2026-02-26,#17285,3665,Complexus Medical - Mishawaka,
+13,STEEL WIRE,46900,1427,260,Milton,2026-02-25,#17371,3749,Suzuki Garphyttan SB,
+14,STEEL TURNING,46900,1426,,,,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,outbound ticket missing from outbound file
+15,STEEL TURNING,28440,1421,256,Milton,2026-02-24,#17323,3743,CIE Somaschini North America,
+16,STEEL TURNING,15180,1419,255,Milton,2026-02-24,#17303,3699,Suzuki Garphyttan SB,
+17,STEEL TURNING,19820,1418,232,Milton,2026-02-23,#17284,3633,Schafer Industries - Schafer Gear Work,
+18,SHEET IRON,32820,1410,228,Milton,2026-02-20,,,chase: DAIFUKU WYNRIGHT,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+19,BUSHELING,27180,1413,231,Milton,2026-02-20,#17225,3551,Stellar Industries,
+20,STEEL WIRE,44380,1412,230,Milton,2026-02-20,#17223,3550,Suzuki Garphyttan SB,
+21,BUSHELING,27840,1411,229,Milton,2026-02-20,#17011,2874,Stellar Industries,inbound ticket -4 business days outside same-day (not stored = should be same day)
+22,STEEL TURNING,12280,1408,225,Milton,2026-02-19,#17189,3459,R & H Machine Products (Ferrous),
+23,STEEL TURNING,56480,1407,224,Milton,2026-02-19,#17188,3458,Fema Corporation,
+24,STEEL TURNING,15220,1406,223,Milton,2026-02-19,#17167,3271,Suzuki Garphyttan SB,
+25,STEEL WIRE,40340,1388,205,Milton,2026-02-16,#17010,2873,Suzuki Garphyttan SB,
+26,STEEL BANDING (fe),29040,1382,202,Milton,2026-02-12,#16846,2628,Champlain Specialty Metals,
+27,BUSHELING,40300,1379,196,Milton,2026-02-11,#16811,2474,Holland Metal Fab,
+28,BUSHELING,39540,1378,195,Milton,2026-02-11,#16810,2473,PENZ PRODUCTS,
+29,STEEL WIRE,34200,1372,192,Milton,2026-02-10,#16749,2417,Suzuki Garphyttan SB,
+30,BUSHELING,38860,1371,191,Milton,2026-02-10,#16748,2416,Stellar Industries,
+31,ZZ DO NOT USE STEEL TURNINGS,20980,1370,190,Milton,2026-02-10,#16750,2418,Schafer Industries - Schafer Gear Work,
+32,ZZ DO NOT USE STEEL TURNINGS,14140,1368,188,Milton,2026-02-10,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+33,ZZ DO NOT USE STEEL TURNINGS,22600,1367,181,Milton,2026-02-09,#16712,2279,Suzuki Garphyttan SB,
+34,ZZ DO NOT USE STEEL TURNINGS,25760,1365,180,Milton,2026-02-06,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,net twin exists only under a different material/yard (coincidental)
+35,EDM WIRE ,1182,1386,184,Milton,2026-02-09,#16862,2195;2207,Complexus Medical - Mishawaka,
+36,TUNGSTEN MOLY TA INSERTS,263,1386,185,Milton,2026-02-09,,,chase: Complexus Medical - Mishawaka,net twin exists only under a different material/yard (coincidental)
+37,ALUMINUM MLC,366,1386,182,Milton,2026-02-09,,,chase: Complexus Medical - Mishawaka,net twin exists only under a different material/yard (coincidental)
+38,17-4 SOLIDS,2706,1386,186,Milton,2026-02-09,,,chase: Complexus Medical - Mishawaka,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+39,ZZ DO NOT USE - ALUMINUM TURNINGS,638,1386,183,Milton,2026-02-09,,,chase: Complexus Medical - Mishawaka,net twin exists only under a different material/yard (coincidental)
+40,BUSHELING,36900,1359,147,Milton,2026-02-04,#16576,2099;2100,Stellar Industries,
+41,ZZ DO NOT USE STEEL TURNINGS,17400,1361,144,Milton,2026-02-04,#16591,2051,R & H Machine Products (Ferrous),
+42,ZZ DO NOT USE STEEL TURNINGS,21020,1360,143,Milton,2026-02-04,#16590,2050,CIE Somaschini North America,
+43,BUSHELING,49780,1355,119,Milton,2026-02-03,#16552,1979,Teck Machine,
+44,STEEL WIRE,30460,1354,118,Milton,2026-02-03,#16551,1978,Suzuki Garphyttan SB,
+45,ZZ DO NOT USE STEEL TURNINGS,47060,1344,113,Milton,2026-01-30,#16465,1883,Fema Corporation,
+46,ZZ DO NOT USE STEEL TURNINGS,56280,1342,111,Milton,2026-01-30,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+47,ZZ DO NOT USE STEEL TURNINGS,18960,1345,114,Milton,2026-01-30,#16432,1830,Schafer Industries - Schafer Gear Work,
+48,ZZ DO NOT USE STEEL TURNINGS,11020,1348,110,Milton,2026-01-30,#16456,1750,Suzuki Garphyttan SB,
+49,BUSHELING,17760,1341,107,Milton,2026-01-29,#16435,1752,Stellar Industries,
+50,STEEL WIRE,35920,1340,106,Milton,2026-01-29,#16434,1751,Suzuki Garphyttan SB,
+51,ZZ DO NOT USE STEEL TURNINGS,50820,1338,108,Milton,2026-01-29,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+52,STEEL BANDING (fe),23980,1337,104,Milton,2026-01-28,#16387,1735,Champlain Specialty Metals,
+53,SHEET IRON,38140,1336,105,Milton,2026-01-29,,,chase: DAIFUKU WYNRIGHT,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+54,BUSHELING,47620,1333,93,Milton,2026-01-26,#16324,1589,Stellar Industries,
+55,STEEL WIRE,27380,1330,92,Milton,2026-01-22,#16257,1458,Suzuki Garphyttan SB,
+56,STEEL WIRE,23680,1329,91,Milton,2026-01-22,#16256,1457,Suzuki Garphyttan SB,
+57,BUSHELING,42600,1322,84,Milton,2026-01-20,#16185,1307,Stellar Industries,
+58,SHEET IRON,39200,1323,85,Milton,2026-01-20,,,chase: DAIFUKU WYNRIGHT,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+59,ZZ DO NOT USE STEEL TURNINGS,54200,1315,78,Milton,2026-01-16,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+60,ZZ DO NOT USE STEEL TURNINGS,41080,1314,77,Milton,2026-01-16,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+61,STEEL BANDING (fe),20040,1318,80,Milton,2026-01-19,#16129,1202,Champlain Specialty Metals,
+62,ZZ DO NOT USE STEEL TURNINGS,50860,1303,67,Milton,2026-01-15,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+63,STEEL WIRE,25760,1312,75,Milton,2026-01-16,#16088,1080,Suzuki Garphyttan SB,
+64,ZZ DO NOT USE ALUMINUM BREAKAGE,10500,1305,69,Milton,2026-01-15,,,chase: Complexus Medical - Mishawaka,net twin exists only under a different material/yard (coincidental)
+65,ZZ DO NOT USE STEEL TURNINGS,56280,1301,65,Milton,2026-01-14,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+66,ZZ DO NOT USE STEEL TURNINGS,43100,1298,63,Milton,2026-01-13,#16024,992,Fema Corporation,
+67,ZZ DO NOT USE STEEL TURNINGS,46520,1297,62,Milton,2026-01-13,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+68,BUSHELING,34460,1295,41,Milton,2026-01-12,#15979,798,Stellar Industries,
+69,STEEL WIRE,38520,1291,32,Milton,2026-01-09,#15884,735,Suzuki Garphyttan SB,
+70,STEEL WIRE,39680,1290,31,Milton,2026-01-09,#15883,734,Suzuki Garphyttan SB,
+71,EDM WIRE ,2030,1328,34,Milton,2026-01-10,#15873,692;693;694;695,Complexus Medical - Mishawaka,
+72,CARBIDE,255,1328,38,Milton,2026-01-10,,,chase: Complexus Medical - Mishawaka,net twin exists only under a different material/yard (coincidental)
+73,17-4 SOLIDS,2940,1328,33,Milton,2026-01-10,,,chase: Complexus Medical - Mishawaka,net twin exists only under a different material/yard (coincidental)
+74,6063 BARE ALUMINUM EXTRUSION,3758,1328,35,Milton,2026-01-10,#15871,485;486;488;489;490,Wait Industries,
+75,5052 ALUMINUM,974,1328,36,Milton,2026-01-10,,,chase: Wait Industries,net twin exists only under a different material/yard (coincidental)
+76,ZZ DO NOT USE - ALUMINUM TURNINGS,774,1328,39,Milton,2026-01-10,,,chase: Complexus Medical - Mishawaka,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+77,17-4 STAINLESS STEEL TURNINGS,230,1328,37,Milton,2026-01-10,,,chase: Complexus Medical - Mishawaka; Complexus Medical - Plymouth,net twin exists only under a different material/yard (coincidental)
+78,BUSHELING,41480,1286,18,Milton,2026-01-08,,,chase: Borkholder Metal Fab Plymouth; DAIFUKU WYNRIGHT; Holland Metal Fab; PENZ PRODUCTS; Stellar Industries; Teck Machine,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+79,5052 ALUMINUM,11610,1283,15,Milton,2026-01-08,#16140,434,Stellar Industries,
+80,6061 ALUMINUM - SPC,1290,1283,14,Milton,2026-01-08,,,,material not in BMR Transport roster - cannot be a DTC order (drop)
+81,ZZ DO NOT USE STEEL TURNINGS,61060,1282,13,Milton,2026-01-07,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+82,ZZ DO NOT USE STEEL TURNINGS,50700,1278,8,Milton,2026-01-06,,,chase: CIE Somaschini North America; Fema Corporation; R & H Machine Products (Ferrous); Schafer Industries - Schafer Gear Work; Suzuki Garphyttan SB,no inbound ticket of this net anywhere (missing inbound leg / not a pass-through)
+83,STEEL BANDING (fe),26800,1279,9,Milton,2026-01-06,#15726,213,Champlain Specialty Metals,
+84,BUSHELING,28880,1276,4,Milton,2026-01-05,#15683,123,Stellar Industries,
+85,STEEL WIRE,37940,1271,3,Milton,2026-01-02,#15588,70,Suzuki Garphyttan SB,

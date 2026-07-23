@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hedging Assignment &mdash; 2026-06-30</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:        #F4F4F2;
+  --bg-1:      #FFFFFF;
+  --bg-2:      #ECECE9;
+  --bg-3:      #E2E2DE;
+  --accent:    #1A1A1A;
+  --accent-d:  rgba(0,0,0,0.06);
+  --gold:      #1A1A1A;
+  --gold-d:    rgba(0,0,0,0.05);
+  --green:     #2E6B3E;
+  --red:       #A23A2E;
+  --text:      #111111;
+  --text-2:    #45453F;
+  --text-3:    #767670;
+  --border:    rgba(0,0,0,0.10);
+  --border-2:  rgba(0,0,0,0.18);
+  --mono:      'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --serif:     'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:      'Inter', Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 56px;
+}
+
+body {
+  font-family: var(--serif);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.65;
+  font-size: 15px;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border-2);
+}
+
+.nav-brand {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  font-family: var(--sans);
+}
+
+.nav-links a {
+  display: block;
+  padding: 0 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color 0.2s;
+  line-height: 56px;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+.nav-cta {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--border-2);
+  padding: 6px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.nav-cta:hover { background: var(--accent-d); }
+
+/* ── HERO ── */
+.hero {
+  padding: 152px 80px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  border-bottom: 1px solid var(--border-2);
+  background: var(--bg-1);
+}
+
+.hero-bg-text { display: none; }
+
+.hero-eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--text-3);
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(44px, 6vw, 68px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  color: var(--text);
+  margin-bottom: 28px;
+  max-width: 900px;
+}
+
+.hero-title .hl { font-style: italic; }
+
+.hero-sub {
+  font-size: 15px;
+  color: var(--text-2);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 56px;
+  font-weight: 400;
+}
+
+.hero-cards {
+  display: flex;
+  gap: 1px;
+  max-width: 720px;
+}
+
+.hero-card {
+  flex: 1;
+  padding: 24px 28px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.hero-card:first-child { border-radius: 6px 0 0 6px; }
+.hero-card:last-child  { border-radius: 0 6px 6px 0; }
+
+.hero-card .hc-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 10px;
+}
+
+.hero-card .hc-num {
+  font-family: var(--serif);
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.hero-card .hc-sub {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+/* ── GENERIC SECTION ── */
+.section {
+  padding: 100px 80px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section.alt { background: var(--bg-1); max-width: none; }
+.section.alt .inner { max-width: 1280px; margin: 0 auto; }
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.eyebrow .idx {
+  font-family: var(--mono);
+  color: var(--text);
+  font-size: 10px;
+}
+
+.eyebrow::after {
+  content: '';
+  flex: 0 0 48px;
+  height: 1px;
+  background: var(--border-2);
+}
+
+h2.section-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  margin-bottom: 56px;
+  line-height: 1.15;
+}
+
+h2.section-title .hl { font-style: italic; }
+
+/* ── FORMULA BLOCK ── */
+.formula-block {
+  background: var(--bg-2);
+  border-left: 2px solid var(--text);
+  border-radius: 0;
+  padding: 32px 40px;
+  margin: 40px 0;
+}
+
+.formula-block .fb-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 16px;
+}
+
+.formula-block .fb-eq {
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* ── CHIPS ── */
+.chip {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 2px;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.chip-red   { background: var(--bg-2); color: var(--red);   border: 1px solid var(--border-2); }
+.chip-blue  { background: var(--bg-2); color: var(--text);  border: 1px solid var(--border-2); }
+.chip-gold  { background: var(--bg-2); color: var(--text);  border: 1px solid var(--border-2); }
+
+/* ── SUMMARY TABLE ── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.data-table th {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: 0 24px 16px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.data-table td {
+  padding: 22px 24px 22px 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: var(--bg-2); }
+
+.data-table .td-name { font-size: 14px; font-weight: 600; color: var(--text); }
+.data-table .td-mono { font-family: var(--mono); font-size: 13px; color: var(--text-2); }
+.data-table .td-big  { font-family: var(--mono); font-size: 24px; font-weight: 600; color: var(--gold); }
+
+/* ── CONCLUSION ── */
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+}
+
+.c-panel-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.c-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 24px;
+}
+
+.c-row .cr-name { font-size: 14px; color: var(--text-2); font-weight: 500; }
+.c-row .cr-num  { font-family: var(--mono); font-size: 24px; font-weight: 600; color: var(--gold); }
+
+.tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0; }
+
+.tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.group-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 28px 0 10px;
+}
+
+/* ── LIVE BADGE ── */
+.live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  color: var(--text-3);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+
+.live::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 40px 80px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+footer p { font-size: 12px; color: var(--text-3); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero, .section { padding: 80px 28px; }
+  .hero-title { font-size: 44px; letter-spacing: -2px; }
+  .hero-bg-text { display: none; }
+  .hero-cards { flex-direction: column; }
+  .hero-card:first-child { border-radius: 6px 6px 0 0; }
+  .hero-card:last-child  { border-radius: 0 0 6px 6px; }
+  .conclusion-grid { grid-template-columns: 1fr; gap: 48px; }
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+</style>
+</head>
+<body>
+
+
+<nav>
+  <a class="nav-brand" href="#home">Hedge Assignment</a>
+  <ul class="nav-links">
+    <li><a href="#vars">Variables</a></li>
+    <li><a href="#hedges">Hedges</a></li>
+    <li><a href="#compute">Compute</a></li>
+  </ul>
+  <a class="nav-cta" href="#hedges">Results &rarr;</a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg-text">HEDGE</div>
+  <div class="hero-eyebrow">Derivatives &amp; Portfolio Risk &mdash; 2026-06-30</div>
+  <h1 class="hero-title">
+    Futures<br><span class="hl">Hedging</span>
+  </h1>
+  <p class="hero-sub">
+    Live market data. Contract counts calculated from current futures prices.
+    Compute proxy correlations from trailing 1-year daily log returns.
+  </p>
+  <div class="hero-cards">
+    <div class="hero-card">
+      <div class="hc-label">Natural Gas &mdash; NG</div>
+      <div class="hc-num">307</div>
+      <div class="hc-sub">contracts short &nbsp;&middot;&nbsp; NG=F @ $3.2540/MMBtu</div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-label">Crude Oil &mdash; CL</div>
+      <div class="hc-num">143</div>
+      <div class="hc-sub">contracts short &nbsp;&middot;&nbsp; CL=F @ $69.96/bbl</div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-label">S&amp;P 500 &mdash; ES</div>
+      <div class="hc-num">26</div>
+      <div class="hc-sub">contracts short &nbsp;&middot;&nbsp; ES=F @ 7,564 pts</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vars">
+  <div class="eyebrow"><span class="idx">01</span> Task One</div>
+  <h2 class="section-title">Formula &amp; <span class="hl">Variables</span></h2>
+
+  <div class="formula-block">
+    <div class="fb-label">Optimal Hedge Formula</div>
+    <div class="fb-eq">
+      N* = h* &times; (V<sub>P</sub> &divide; V<sub>F</sub>) &nbsp;&nbsp;&nbsp; where &nbsp; V<sub>F</sub> = F &times; Q &nbsp; and &nbsp; h* = &rho; &times; (&sigma;<sub>S</sub> &divide; &sigma;<sub>F</sub>)
+    </div>
+  </div>
+
+  <table class="data-table" style="max-width:820px">
+    <thead><tr><th>Symbol</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="td-mono" style="font-size:16px">N*</td><td class="td-name" style="font-weight:400">Number of futures contracts to sell short</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">V<sub>P</sub></td><td class="td-name" style="font-weight:400">Portfolio value ($10,000,000)</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">V<sub>F</sub></td><td class="td-name" style="font-weight:400">Notional value per contract (F &times; Q)</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">F</td><td class="td-name" style="font-weight:400">Live futures price</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">Q</td><td class="td-name" style="font-weight:400">Contract size / multiplier</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">h*</td><td class="td-name" style="font-weight:400">Optimal hedge ratio (&rho; &times; &sigma;<sub>S</sub> &divide; &sigma;<sub>F</sub>)</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">&rho;</td><td class="td-name" style="font-weight:400">Correlation between spot &amp; futures price changes</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">&sigma;<sub>S</sub></td><td class="td-name" style="font-weight:400">Volatility of spot price changes</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">&sigma;<sub>F</sub></td><td class="td-name" style="font-weight:400">Volatility of futures price changes</td></tr>
+      <tr><td class="td-mono" style="font-size:16px">&beta;<sub>P</sub></td><td class="td-name" style="font-weight:400">Portfolio beta (equities only, via OLS regression)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section alt" id="hedges">
+  <div class="inner">
+    <div class="eyebrow"><span class="idx">02</span> Task One</div>
+    <h2 class="section-title">Hedge <span class="hl">Results</span></h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Portfolio</th>
+          <th>Futures</th>
+          <th>Live Price</th>
+          <th>Contract $</th>
+          <th>N* Exact</th>
+          <th>Contracts</th>
+          <th>Coverage</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="td-name">Henry Hub Natural Gas</td>
+        <td><span class="chip chip-blue">NG=F</span></td>
+        <td class="td-mono">$3.2540</td>
+        <td class="td-mono">$32,540</td>
+        <td class="td-mono">307.3141</td>
+        <td class="td-big">307</td>
+        <td class="td-mono">99.90%</td>
+      </tr>
+      <tr>
+        <td class="td-name">WTI Crude Oil</td>
+        <td><span class="chip chip-blue">CL=F</span></td>
+        <td class="td-mono">$69.9600</td>
+        <td class="td-mono">$69,960</td>
+        <td class="td-mono">142.9388</td>
+        <td class="td-big">143</td>
+        <td class="td-mono">100.04%</td>
+      </tr>
+      <tr>
+        <td class="td-name">E-mini S&P 500 (&beta;=0.9831)</td>
+        <td><span class="chip chip-blue">ES=F</span></td>
+        <td class="td-mono">7,564.50</td>
+        <td class="td-mono">$378,225</td>
+        <td class="td-mono">25.9927</td>
+        <td class="td-big">26</td>
+        <td class="td-mono">98.34%</td>
+      </tr></tbody>
+    </table>
+    <p style="font-size:13px; color:var(--text-3); margin-top:24px;">
+      All three: <span class="chip chip-red">Short Hedge</span> &nbsp;&middot;&nbsp; V<sub>P</sub> = $10,000,000 &nbsp;&middot;&nbsp; NG &amp; CL use h*&asymp;1.0 (direct exposure) &nbsp;&middot;&nbsp; ES uses N* = &beta;<sub>P</sub> &times; V<sub>P</sub> &divide; V<sub>F</sub>
+    </p>
+  </div>
+</section>
+
+<section class="section" id="compute">
+  <div class="eyebrow"><span class="idx">03</span> Task Two</div>
+  <h2 class="section-title">
+    Hedging <span class="hl">Compute</span>
+    <span class="live">2026-06-30</span>
+  </h2>
+  <p style="font-size:15px; color:var(--text-2); max-width:640px; margin-bottom:32px; line-height:1.8;">
+    No direct "compute" futures exist. Correlation &amp; beta computed vs <strong style="color:var(--text)">NVDA</strong> (1yr daily log returns).
+  </p>
+  <table class="data-table">
+    <thead><tr><th>Ticker</th><th>Company</th><th>Layer</th><th>Role</th><th>Corr/NVDA</th><th>Beta/NVDA</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip chip-gold">NVDA</span></td><td class="td-name" style="font-weight:400">NVIDIA Corporation</td><td class="td-mono">Semiconductor</td><td class="td-mono">AI GPU leader</td><td class="td-mono">1.000</td><td class="td-mono">1.000</td></tr>
+      <tr><td><span class="chip chip-blue">TSM</span></td><td class="td-name" style="font-weight:400">Taiwan Semiconductor</td><td class="td-mono">Semiconductor</td><td class="td-mono">Manufactures AI chips</td><td class="td-mono">0.659</td><td class="td-mono">0.716</td></tr>
+      <tr><td><span class="chip chip-blue">SMH</span></td><td class="td-name" style="font-weight:400">VanEck Semiconductor ETF</td><td class="td-mono">ETF</td><td class="td-mono">Semiconductor basket</td><td class="td-mono">0.695</td><td class="td-mono">0.698</td></tr>
+      <tr><td><span class="chip chip-blue">SOXX</span></td><td class="td-name" style="font-weight:400">iShares Semiconductor ETF</td><td class="td-mono">ETF</td><td class="td-mono">Semiconductor basket</td><td class="td-mono">0.594</td><td class="td-mono">0.680</td></tr>
+      <tr><td><span class="chip chip-blue">AVGO</span></td><td class="td-name" style="font-weight:400">Broadcom Inc.</td><td class="td-mono">Semiconductor</td><td class="td-mono">Custom AI ASICs</td><td class="td-mono">0.521</td><td class="td-mono">0.688</td></tr>
+      <tr><td><span class="chip chip-blue">VRT</span></td><td class="td-name" style="font-weight:400">Vertiv Holdings</td><td class="td-mono">Infrastructure</td><td class="td-mono">AI rack cooling/power</td><td class="td-mono">0.530</td><td class="td-mono">0.900</td></tr>
+      <tr><td><span class="chip chip-blue">AMD</span></td><td class="td-name" style="font-weight:400">Advanced Micro Devices</td><td class="td-mono">Semiconductor</td><td class="td-mono">GPUs &amp; data-center CPUs</td><td class="td-mono">0.500</td><td class="td-mono">0.940</td></tr>
+      <tr><td><span class="chip chip-blue">SMCI</span></td><td class="td-name" style="font-weight:400">Super Micro Computer</td><td class="td-mono">Infrastructure</td><td class="td-mono">GPU server systems</td><td class="td-mono">0.456</td><td class="td-mono">1.170</td></tr>
+      <tr><td><span class="chip chip-blue">MU</span></td><td class="td-name" style="font-weight:400">Micron Technology</td><td class="td-mono">Semiconductor</td><td class="td-mono">HBM memory for GPUs</td><td class="td-mono">0.454</td><td class="td-mono">0.945</td></tr>
+      <tr><td><span class="chip chip-blue">ETN</span></td><td class="td-name" style="font-weight:400">Eaton Corporation</td><td class="td-mono">Power</td><td class="td-mono">Data-center power mgmt</td><td class="td-mono">0.423</td><td class="td-mono">0.419</td></tr>
+      <tr><td><span class="chip chip-blue">MSFT / GOOGL / AMZN / META</span></td><td class="td-name" style="font-weight:400">Microsoft / Alphabet / Amazon / Meta</td><td class="td-mono">Cloud</td><td class="td-mono">Hyperscaler AI capex</td><td class="td-mono">0.28&ndash;0.36</td><td class="td-mono">0.24&ndash;0.37</td></tr>
+    </tbody>
+  </table>
+
+</section>
+
+<section class="section" id="conclusion">
+  <div class="eyebrow"><span class="idx">04</span> Summary</div>
+  <h2 class="section-title">Conclusions</h2>
+  <div class="conclusion-grid">
+    <div>
+      <div class="c-panel-title">Task 1 &mdash; Hedge Contracts</div>
+      <div class="c-row"><span class="cr-name">Henry Hub Natural Gas (NG)</span><span class="cr-num">307</span></div><div class="c-row"><span class="cr-name">WTI Light Sweet Crude Oil (CL)</span><span class="cr-num">143</span></div><div class="c-row"><span class="cr-name">E-mini S&P 500 (ES)</span><span class="cr-num">26</span></div>
+      <div style="margin-top:32px; padding:24px; background:var(--bg-2); border-radius:6px; border:1px solid var(--border)">
+        <div style="font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-3); margin-bottom:12px">Formulas Used</div>
+        <div style="font-family:var(--mono); font-size:13px; color:var(--text-2); line-height:2.2">
+          N* = V<sub>P</sub> &divide; (F &times; Q) &nbsp;&nbsp;&mdash;&nbsp;&nbsp; Commodity<br>
+          N* = &beta; &times; V<sub>P</sub> &divide; (Index &times; $50) &nbsp;&nbsp;&mdash;&nbsp;&nbsp; Equity
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="c-panel-title">Task 2 &mdash; Compute Proxies</div>
+      <div class="group-label">Top Correlation to NVDA</div>
+      <div class="tag-list"><span class="tag">NVDA</span><span class="tag">SMH</span><span class="tag">TSM</span><span class="tag">SOXX</span><span class="tag">VRT</span></div>
+      <div class="group-label">Power / Energy (Emerging)</div>
+      <div class="tag-list"><span class="tag">ETN</span><span class="tag">VST</span><span class="tag">CEG</span></div>
+      <div class="group-label">Diversified ETF Baskets</div>
+      <div class="tag-list"><span class="tag">SMH</span><span class="tag">SOXX</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>All prices are live market data fetched 2026-06-30 via Yahoo Finance.</p>
+  <p>For informational and educational purposes only &mdash; not investment advice.</p>
+</footer>
+
+</body>
+</html>

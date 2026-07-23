@@ -1,0 +1,9 @@
+fold,n_features,features
+1,9,"AF BTC Return 2D, AF BTC Realized Vol 14D, AF BTC Intraday Return, AF M2 Money Supply Delta 1D, AF BTC Return Percentile 30D, AF BTC Realized Vol 7D, AF BTC Momentum Accel 3D, AF BTC Close Location Z 14D, AF Unemployment Rate Last Release Chg"
+2,8,"AF BTC Return 2D, AF Dow Z 30D, AF Gold Delta 1D, AF Gold Z 14D, AF Natural Gas Delta 1D, AF Nasdaq Z 30D, AF BTC Momentum Accel 7D, AF Dow Z 14D"
+3,9,"AF BTC Momentum Accel 7D, AF Nasdaq Z 30D, AF BTC Return 2D, AF BTC Realized Vol 14D, AF Dow Z 30D, AF Natural Gas Delta 1D, AF Dow Z 14D, AF GDP Last Release Pct Chg, AF Gold Delta 1D"
+4,9,"AF BTC Momentum Accel 7D, AF BTC Close Location Z 14D, AF Nasdaq Z 30D, AF BTC Return Percentile 30D, AF Dow Z 30D, AF BTC Realized Vol 14D, AF Dow Z 14D, AF Fed Funds Rate Last Release Chg, AF BTC Return 2D"
+5,7,"AF BTC Close Location Z 14D, AF BTC Momentum Accel 7D, AF BTC Return Percentile 30D, AF Gold Z 14D, AF Silver Delta 1D, AF Gold Pct 1D, AF Dow Z 30D"
+6,7,"AF BTC Return Percentile 30D, AF BTC Close Location Z 14D, AF BTC Momentum Accel 7D, AF Gold Z 14D, AF CPI Last Release Chg, AF BTC Return 2D, AF Silver Pct 1D"
+7,8,"AF BTC Close Location Z 14D, AF BTC Return Percentile 30D, AF BTC Momentum Accel 7D, AF CPI Last Release Chg, AF BTC Return 2D, AF Gold Z 14D, AF Dow Z 30D, AF Fed Funds Rate Pct 1D"
+8,9,"AF BTC Close Location Z 14D, AF BTC Return Percentile 30D, AF BTC Intraday Return, AF BTC Momentum Accel 3D, AF CPI Last Release Chg, AF BTC MA Gap 3D, AF Gold Z 14D, AF Dow Z 30D, AF BTC Range Z 30D"

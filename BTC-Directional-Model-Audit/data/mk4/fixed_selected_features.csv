@@ -1,0 +1,10 @@
+feature
+AF BTC Close Location Z 14D
+AF BTC Return Percentile 30D
+AF BTC Intraday Return
+AF BTC Momentum Accel 3D
+AF BTC MA Gap 3D
+AF CPI Last Release Chg
+AF BTC Volume Z 14D
+AF M2 Money Supply Accel 7D
+AF BTC MA Gap 7D
