@@ -2,7 +2,7 @@
 
 ## Executive summary
 
-A previous intern (Sohan Bendre) built a supervised-learning model that reportedly predicts
+A previous intern built a supervised-learning model that reportedly predicts
 next-day Bitcoin direction at **55.94% accuracy** (vs. a 50.31% majority-class baseline). I
 audited that result, found it was inflated by feature-selection leakage, rebuilt the model
 leakage-free, and then tried substantially harder to find a real edge: a much larger
